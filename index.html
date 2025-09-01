@@ -87,7 +87,7 @@
         <div class="column has-text-centered">
           
           <!-- Title. -->
-          <h1 class="title is-2 publication-title">A Reactive Grasping Framework For Multi-DoF Grippers via Dynamical Systems and MPC</h1>
+          <h1 class="title is-2 publication-title">A Reactive Grasping Framework For Multi-DoF Grippers via Task Space Velocity Fields and Joint Space QP</h1>
           <p class="subtitle">Under review</p>
           
           <!-- Authors. -->
@@ -97,13 +97,13 @@
               <a href="https://www.gabe-yhlee.com">Yonghyeon Lee<sup>1</sup></a>, 
             </span>
             <span class="author-block">
-              Tzu-Yuan Lin<sup>1</sup></a>, 
+              <a href="https://tzuyuan.github.io/">Tzu-Yuan Lin<sup>1</sup></a>, 
             </span>
             <span class="author-block">
-              Alex Alexiev<sup>1</sup></a>, 
+              <a href="https://alex-alexiev.github.io/"> Alexander Alexiev<sup>1</sup></a>, 
             </span>
             <span class="author-block">
-              Sangbae Kim<sup>1</sup></a>
+              <a href="https://meche.mit.edu/people/faculty/SANGBAE@MIT.EDU">Sangbae Kim<sup>1</sup></a>
             </span>
           </div>
 
@@ -152,26 +152,34 @@
                style="max-width: 1000px; background-color: #f5f5f5;">
             <div class="column is-full-width">
               <p style="color: #333333; font-size: 1.25em; font-weight: bold;">
-                TL;DR: 
+                TL;DR: We plan <em>globally</em> in task space and track <em>locally</em> in joint space, enabling high-DoF grippers to reactively grasp highly concave objects in real time.
               </p>
             </div>
           </div>
 
-          <div class="columns is-left" style="margin-top: 20px;">   
+          <div class="columns is-centered" style="margin-top: 20px; margin-bottom: 30px;">   
+            <p style="color: #333333; font-size: 1.25em;"> Real-time demos</p>
           </div>
 
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <div class="content">
-                <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
                   <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
             <div class="column has-text-centered">
               <div class="content">
-                <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                  <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
+                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
+                  <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column has-text-centered">
+              <div class="content">
+                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
+                  <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -186,7 +194,7 @@
                   <h2 class="title is-3">Abstract</h2>
                   <div class="content has-text-justified">
                     <p>
-
+                      We present a fast and reactive grasping framework for multi-DoF grippers that combines task-space velocity fields with joint-space Quadratic Program (QP) in a hierarchical structure. Reactive, collision-free global motion planning is particularly challenging for high-DoF systems, as simultaneous increases in state dimensionality and planning horizon trigger a combinatorial explosion of the search space, making real-time planning intractable. To address this, we plan <em>globally</em> in a lower-dimensional task space – such as fingertip positions – and track <em>locally</em> in the full joint space while enforcing all constraints. This approach is realized by constructing velocity fields in multiple task-space coordinates (or, in some cases, a subset of joint coordinates) and solving a weighted joint-space QP to compute joint velocities that track these fields with appropriately assigned priorities. Through simulation experiments with privileged knowledge and real-world tests using the recent pose-tracking algorithm, FoundationPose, we verify that our method enables high-DoF arm–hand systems to perform real-time, collision-free reaching motions while adapting to dynamic environments and external disturbances.
                     </p>
                   </div>
                 </div>
@@ -210,7 +218,7 @@
                style="max-width: 1000px;">
             <div class="column is-full-width">
               <p style="font-size: 1.1em;">
-                Videos of our reactive regrasping algorithms running on the MuJoCo physics engine demonstrate robust real-time adaptation to dynamic perturbations of both the robot and the objects.
+                Videos of our reactive grasping algorithms running on the MuJoCo physics engine demonstrate robust real-time adaptation to dynamic perturbations of both the robot and the objects.
               </p>
             </div>
           </div>
@@ -392,7 +400,7 @@
           <div class="column has-text-centered">
             <div class="content">
               <video id="sd" autoplay controls muted loop playsinline style="height: 500px; margin-top: 0px;">
-                <source src="./assets/videos/WineGlass_four_moving_boxes_v2.mp4" type="video/mp4">
+                <source src="./assets/videos/[CLIPED] WineGlass_four_moving_boxes_v2_narrow.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -464,6 +472,106 @@
             <h2 class="title is-3">2. Real Robot Results</h2>
           </div>            
         </div>
+
+        <div class="columns is-centered has-text-justified" 
+               style="max-width: 1000px;">
+            <div class="column is-full-width">
+              <p style="font-size: 1.1em;">
+                Videos of our reactive grasping algorithms running with the FoundationPose algorithm -- which enables real-time 6-DoF object pose tracking -- demonstrate robust real-time adaptation to dynamic perturbations of both the robot and the objects.
+              </p>
+            </div>
+          </div>
+
+        <div class="columns is-left" style="margin-top: 20px;">
+          <div class="content">
+            <h2 class="title is-4">2.1. Single Target Object</h2>
+          </div>            
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                <source src="./assets/videos/Red_Cup_Edit.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                <source src="./assets/videos/Tape_Edit.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-left" style="margin-top: 20px;">
+          <div class="content">
+            <h2 class="title is-4">2.2. Obstacles</h2>
+          </div>            
+        </div>
+
+        <div class="columns is-centered has-text-justified" 
+              style="max-width: 1000px; margin-bottom: 20px;">
+          <div class="column is-full-width">
+            <p style="font-size: 1.1em;">
+              Obstacles are represented as Superquadrics.
+            </p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                <source src="./assets/videos/One_Obs_V1_Cut.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                <source src="./assets/videos/Two_Obs_V1_Cut.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                <source src="./assets/videos/Two_Obs_V2_Cut.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="content">
+              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+          
+          
+
+         
 
 
 
