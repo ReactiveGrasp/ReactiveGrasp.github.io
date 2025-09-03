@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>ReactiveGrasp</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -26,7 +25,8 @@
   <style>
     .pretty-number {
       display: inline-block;
-      background-color: #000000; /* Choose a color */
+      background-color: #000000;
+      /* Choose a color */
       color: white;
       font-weight: bold;
       font-size: 1.0em;
@@ -34,11 +34,13 @@
       height: 1.5em;
       line-height: 1.5em;
       text-align: center;
-      border-radius: 40%; /* Makes the background circular */
-      margin-right: 8px; /* Adds spacing between number and text */
+      border-radius: 40%;
+      /* Makes the background circular */
+      margin-right: 8px;
+      /* Adds spacing between number and text */
     }
   </style>
-  
+
   <style>
     .pretty-exclamation {
       display: inline-block;
@@ -57,532 +59,552 @@
 
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://www.gabe-yhlee.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://www.gabe-yhlee.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
 
-      
+
       </div>
     </div>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          
-          <!-- Title. -->
-          <h1 class="title is-2 publication-title">A Reactive Grasping Framework For Multi-DoF Grippers via Task Space Velocity Fields and Joint Space QP</h1>
-          <p class="subtitle">Under review</p>
-          
-          <!-- Authors. -->
-          <div class="is-size-5 publication-authors">
-            </span>
-            <span class="author-block">
-              <a href="https://www.gabe-yhlee.com">Yonghyeon Lee<sup>1</sup></a>, 
-            </span>
-            <span class="author-block">
-              <a href="https://tzuyuan.github.io/">Tzu-Yuan Lin<sup>1</sup></a>, 
-            </span>
-            <span class="author-block">
-              <a href="https://alex-alexiev.github.io/"> Alexander Alexiev<sup>1</sup></a>, 
-            </span>
-            <span class="author-block">
-              <a href="https://meche.mit.edu/people/faculty/SANGBAE@MIT.EDU">Sangbae Kim<sup>1</sup></a>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup><a href="https://biomimetics.mit.edu/"></a>MIT Biomimetic Robotics Lab</span>
-          </div>
-
-          <!-- Icons. -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
 
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="http://arxiv.org/abs/2509.01044"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+            <!-- Title. -->
+            <h1 class="title is-2 publication-title">A Reactive Grasping Framework For Multi-DoF Grippers via Task Space
+              Velocity Fields and Joint Space QP</h1>
+            <p class="subtitle">Under review</p>
+
+            <!-- Authors. -->
+            <div class="is-size-5 publication-authors">
+              </span>
+              <span class="author-block">
+                <a href="https://www.gabe-yhlee.com">Yonghyeon Lee<sup>1*</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://tzuyuan.github.io/">Tzu-Yuan Lin<sup>1*</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://alex-alexiev.github.io/"> Alexander Alexiev<sup>1</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://meche.mit.edu/people/faculty/SANGBAE@MIT.EDU">Sangbae Kim<sup>1</sup></a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>* </sup><a href=""></a>The authors contributed
+                equally to this project</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1 </sup><a href="https://biomimetics.mit.edu/"></a>MIT Biomimetic Robotics
+                Lab</span>
+            </div>
+
+            <!-- Icons. -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="http://arxiv.org/abs/2509.01044" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://ReactiveGrasp.github.io/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (Coming soon)</span>
+                    </span>
+                    <span>Paper</span>
                   </a>
-              </span>
+                </span>
 
-            </div>
-          </div>
-          
-          <!-- Blank. -->
-          <div class="columns is-centered">
-            <div class="content">
-              <h2 class="title is-3"></h2>
-            </div>            
-          </div>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://ReactiveGrasp.github.io/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
 
-          <!-- TL;DR. -->
-          <div class="columns is-centered has-text-justified interpolation-panel" 
-               style="max-width: 1000px; background-color: #f5f5f5;">
-            <div class="column is-full-width">
-              <p style="color: #333333; font-size: 1.25em; font-weight: bold;">
-                TL;DR: We plan <em>globally</em> in task space and track <em>locally</em> in joint space, enabling high-DoF grippers to reactively grasp highly concave objects in real time.
-              </p>
-            </div>
-          </div>
-
-          <div class="columns is-centered" style="margin-top: 20px; margin-bottom: 30px;">   
-            <p style="color: #333333; font-size: 1.25em;"> Real-time demos</p>
-          </div>
-
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <div class="content">
-                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
-                  <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
-                </video>
               </div>
             </div>
-            <div class="column has-text-centered">
-              <div class="content">
-                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
-                  <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-            <div class="column has-text-centered">
-              <div class="content">
-                <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
-                  <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-          </div>
-          
-          <section class="section">
-            <div class="container is-max-desktop">
 
-              <!-- Abstract. -->
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                  <h2 class="title is-3">Abstract</h2>
-                  <div class="content has-text-justified">
-                    <p>
-                      We present a fast and reactive grasping framework for multi-DoF grippers that combines task-space velocity fields with joint-space Quadratic Program (QP) in a hierarchical structure. Reactive, collision-free global motion planning is particularly challenging for high-DoF systems, as simultaneous increases in state dimensionality and planning horizon trigger a combinatorial explosion of the search space, making real-time planning intractable. To address this, we plan <em>globally</em> in a lower-dimensional task space – such as fingertip positions – and track <em>locally</em> in the full joint space while enforcing all constraints. This approach is realized by constructing velocity fields in multiple task-space coordinates (or, in some cases, a subset of joint coordinates) and solving a weighted joint-space QP to compute joint velocities that track these fields with appropriately assigned priorities. Through simulation experiments with privileged knowledge and real-world tests using the recent pose-tracking algorithm, FoundationPose, we verify that our method enables high-DoF arm–hand systems to perform real-time, collision-free reaching motions while adapting to dynamic environments and external disturbances.
-                    </p>
-                  </div>
+            <!-- Blank. -->
+            <div class="columns is-centered">
+              <div class="content">
+                <h2 class="title is-3"></h2>
+              </div>
+            </div>
+
+            <!-- TL;DR. -->
+            <div class="columns is-centered has-text-justified interpolation-panel"
+              style="max-width: 1000px; background-color: #f5f5f5;">
+              <div class="column is-full-width">
+                <p style="color: #333333; font-size: 1.25em; font-weight: bold;">
+                  TL;DR: We plan <em>globally</em> in task space and track <em>locally</em> in joint space, enabling
+                  high-DoF grippers to reactively grasp highly concave objects in real time.
+                </p>
+              </div>
+            </div>
+
+            <div class="columns is-centered" style="margin-top: 20px; margin-bottom: 30px;">
+              <p style="color: #333333; font-size: 1.25em;"> Real-time demos</p>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
+                    <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
+                  </video>
                 </div>
               </div>
-          </section>
-
-          <!-- Video. -->
-           <div class="columns is-left" style="margin-top: 40px;">
-            <div class="content">
-              <h2 class="title is-3">1. Simulation Results</h2>
-            </div>            
-          </div>
-
-          <div class="columns is-left" style="margin-top: 20px;">
-            <div class="content">
-              <h2 class="title is-4">1.1. Single Target Object</h2>
-            </div>            
-          </div>
-          
-          <div class="columns is-centered has-text-justified" 
-               style="max-width: 1000px;">
-            <div class="column is-full-width">
-              <p style="font-size: 1.1em;">
-                Videos of our reactive grasping algorithms running on the MuJoCo physics engine demonstrate robust real-time adaptation to dynamic perturbations of both the robot and the objects.
-              </p>
-            </div>
-          </div>
-          
-
-          <div class="columns is-left" style="margin-top: 20px;">
-            <div class="content">
-              <h2 class="title is-5">1.1. Wine Glass</h2>
-            </div>            
-          </div>
-
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <div class="content">
-                <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
-                <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                  <source src="./assets/videos/WineGlass_robot_pushed.mp4" type="video/mp4">
-                </video>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
+                    <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 500px; margin-top: -15px;">
+                    <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
-            <div class="column has-text-centered">
+
+            <section class="section">
+              <div class="container is-max-desktop">
+
+                <!-- Abstract. -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                      <p>
+                        We present a fast and reactive grasping framework for multi-DoF grippers that combines
+                        task-space velocity fields with joint-space Quadratic Program (QP) in a hierarchical structure.
+                        Reactive, collision-free global motion planning is particularly challenging for high-DoF
+                        systems, as simultaneous increases in state dimensionality and planning horizon trigger a
+                        combinatorial explosion of the search space, making real-time planning intractable. To address
+                        this, we plan <em>globally</em> in a lower-dimensional task space – such as fingertip positions
+                        – and track <em>locally</em> in the full joint space while enforcing all constraints. This
+                        approach is realized by constructing velocity fields in multiple task-space coordinates (or, in
+                        some cases, a subset of joint coordinates) and solving a weighted joint-space QP to compute
+                        joint velocities that track these fields with appropriately assigned priorities. Through
+                        simulation experiments with privileged knowledge and real-world tests using the recent
+                        pose-tracking algorithm, FoundationPose, we verify that our method enables high-DoF arm–hand
+                        systems to perform real-time, collision-free reaching motions while adapting to dynamic
+                        environments and external disturbances.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+            <!-- Video. -->
+            <div class="columns is-left" style="margin-top: 40px;">
               <div class="content">
-                <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
-                <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                  <source src="./assets/videos/WineGlass_target_reset.mp4" type="video/mp4">
-                </video>
+                <h2 class="title is-3">1. Simulation Results</h2>
               </div>
             </div>
-            <div class="column has-text-centered">
+
+            <div class="columns is-left" style="margin-top: 20px;">
               <div class="content">
-                <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
-                <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                  <source src="./assets/videos/WineGlass_3D_path_visualization.mp4" type="video/mp4">
-                </video>
+                <h2 class="title is-4">1.1. Single Target Object</h2>
               </div>
             </div>
-          </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-5">1.2. Bowl</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Bowl_robot_pushed.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered has-text-justified" style="max-width: 1000px;">
+              <div class="column is-full-width">
+                <p style="font-size: 1.1em;">
+                  Videos of our reactive grasping algorithms running on the MuJoCo physics engine demonstrate robust
+                  real-time adaptation to dynamic perturbations of both the robot and the objects.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Bowl_target_reset.mp4" type="video/mp4">
-              </video>
+
+
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-5">1.1. Wine Glass</h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Bowl_3D_path_visualization.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/WineGlass_robot_pushed.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/WineGlass_target_reset.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/WineGlass_3D_path_visualization.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-5">1.3. Mug</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Mug_robot_pushed.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-5">1.2. Bowl</h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Mug_target_reset.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Bowl_robot_pushed.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Bowl_target_reset.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Bowl_3D_path_visualization.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Mug_3D_path_visualization.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-5">1.3. Mug</h2>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-5">1.4. Dish</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Dish_robot_pushed.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Mug_robot_pushed.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Mug_target_reset.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Mug_3D_path_visualization.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Dish_target_reset.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-5">1.4. Dish</h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Dish_3D_path_visualization.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Recovery from External Perturbations</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Dish_robot_pushed.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Dynamic Adaptation to Moving Objects</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Dish_target_reset.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Realtime Fingertip Paths Optimization</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Dish_3D_path_visualization.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-5">▸ Failure Cases</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered has-text-justified" 
-               style="max-width: 1000px;">
-            <div class="column is-full-width">
-              <p style="font-size: 1.1em;">
-                Our method does not guarantee global convergence of the entire robot-hand system. Although the global path is planned in fingertip position space, the low-level QP only provides local tracking and does not account for global feasibility. As a result, complex joint constraints can still cause the system to become trapped -- though this occurs rarely in practice.
-              </p>
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-5">▸ Failure Cases</h2>
+              </div>
             </div>
-          </div>
 
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Mug</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Mug_failure.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered has-text-justified" style="max-width: 1000px;">
+              <div class="column is-full-width">
+                <p style="font-size: 1.1em;">
+                  Our method does not guarantee global convergence of the entire robot-hand system. Although the global
+                  path is planned in fingertip position space, the low-level QP only provides local tracking and does
+                  not account for global feasibility. As a result, complex joint constraints can still cause the system
+                  to become trapped -- though this occurs rarely in practice.
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 40px;">
-          <div class="content">
-            <h2 class="title is-4">1.2. Cluttered Scenes with Moving Obstacles</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 500px; margin-top: 0px;">
-                <source src="./assets/videos/WineGlass_four_moving_boxes_v1.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Mug</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Mug_failure.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 500px; margin-top: 0px;">
-                <source src="./assets/videos/[CLIPED] WineGlass_four_moving_boxes_v2_narrow.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-left" style="margin-top: 40px;">
+              <div class="content">
+                <h2 class="title is-4">1.2. Cluttered Scenes with Moving Obstacles</h2>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 40px;">
-          <div class="content">
-            <h2 class="title is-4">Q) What happens if we use linear fingertip velocity fields? </h2>
-          </div>            
-        </div>
-        
-        <div class="columns is-centered has-text-justified" 
-               style="max-width: 1000px;">
-            <div class="column is-full-width">
-              <p style="font-size: 1.1em;">
-                Control with naïve linear fingertip velocity fields causes the robot to become trapped in local minima, failing to converge to the target grasp pose, particularly because of concave geometries.
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 500px; margin-top: 0px;">
+                    <source src="./assets/videos/WineGlass_four_moving_boxes_v1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 500px; margin-top: 0px;">
+                    <source src="./assets/videos/[CLIPED] WineGlass_four_moving_boxes_v2_narrow.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
 
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Box</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Box_linaer.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-left" style="margin-top: 40px;">
+              <div class="content">
+                <h2 class="title is-4">Q) What happens if we use linear fingertip velocity fields? </h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Wine Glass</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/WineGlass_Linear.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered has-text-justified" style="max-width: 1000px;">
+              <div class="column is-full-width">
+                <p style="font-size: 1.1em;">
+                  Control with naïve linear fingertip velocity fields causes the robot to become trapped in local
+                  minima, failing to converge to the target grasp pose, particularly because of concave geometries.
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Mug</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Mug_Linear.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Box</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Box_linaer.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Wine Glass</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/WineGlass_Linear.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Mug</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Mug_Linear.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Dish</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Dish_linear.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Dish</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Dish_linear.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <p class="title is-6" style="font-weight: normal;">Bowl</p> <br>
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Bowl_Linear.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <p class="title is-6" style="font-weight: normal;">Bowl</p> <br>
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Bowl_Linear.mp4" type="video/mp4">
-              </video>
+
+
+            <div class="columns is-left" style="margin-top: 40px;">
+              <div class="content">
+                <h2 class="title is-3">2. Real Robot Results</h2>
+              </div>
             </div>
-          </div>
-        </div>
 
-
-        <div class="columns is-left" style="margin-top: 40px;">
-          <div class="content">
-            <h2 class="title is-3">2. Real Robot Results</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered has-text-justified" 
-               style="max-width: 1000px;">
-            <div class="column is-full-width">
-              <p style="font-size: 1.1em;">
-                Videos of our reactive grasping algorithms running with the FoundationPose algorithm -- which enables real-time 6-DoF object pose tracking -- demonstrate robust real-time adaptation to dynamic perturbations of both the robot and the objects.
-              </p>
+            <div class="columns is-centered has-text-justified" style="max-width: 1000px;">
+              <div class="column is-full-width">
+                <p style="font-size: 1.1em;">
+                  Videos of our reactive grasping algorithms running with the FoundationPose algorithm -- which enables
+                  real-time 6-DoF object pose tracking -- demonstrate robust real-time adaptation to dynamic
+                  perturbations of both the robot and the objects.
+                </p>
+              </div>
             </div>
-          </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-4">2.1. Single Target Object</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
-                <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-4">2.1. Single Target Object</h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
-                <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                    <source src="./assets/videos/Green_Bowl_Edit.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                    <source src="./assets/videos/Wine_Glass_Edit.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                    <source src="./assets/videos/Red_Cup_Edit.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
+                    <source src="./assets/videos/Tape_Edit.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
-                <source src="./assets/videos/Red_Cup_Edit.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-left" style="margin-top: 20px;">
+              <div class="content">
+                <h2 class="title is-4">2.2. Obstacles</h2>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="width: 300px;">
-                <source src="./assets/videos/Tape_Edit.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered has-text-justified" style="max-width: 1000px; margin-bottom: 20px;">
+              <div class="column is-full-width">
+                <p style="font-size: 1.1em;">
+                  Obstacles are represented as Superquadrics.
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="columns is-left" style="margin-top: 20px;">
-          <div class="content">
-            <h2 class="title is-4">2.2. Obstacles</h2>
-          </div>            
-        </div>
-
-        <div class="columns is-centered has-text-justified" 
-              style="max-width: 1000px; margin-bottom: 20px;">
-          <div class="column is-full-width">
-            <p style="font-size: 1.1em;">
-              Obstacles are represented as Superquadrics.
-            </p>
-          </div>
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/One_Obs_V1_Cut.mp4" type="video/mp4">
-              </video>
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/One_Obs_V1_Cut.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Two_Obs_V1_Cut.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Two_Obs_V1_Cut.mp4" type="video/mp4">
-              </video>
+
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/Two_Obs_V2_Cut.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="content">
+                  <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
+                    <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/Two_Obs_V2_Cut.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column has-text-centered">
-            <div class="content">
-              <video id="sd" autoplay controls muted loop playsinline style="height: 300px; margin-top: -15px;">
-                <source src="./assets/videos/ReactiveGraspObstacles.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-
-          
-          
-
-         
 
 
 
-</section>
 
 
-<!-- Citation. -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title is-3">Citation</h2>
-    <pre><code>
+
+
+
+  </section>
+
+
+  <!-- Citation. -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">Citation</h2>
+      <pre><code>
       @misc{lee2025reactivegraspingframeworkmultidof,
       title={A Reactive Grasping Framework for Multi-DoF Grippers via Task Space Velocity Fields and Joint Space QP}, 
       author={Yonghyeon Lee and Tzu-Yuan Lin and Alexander Alexiev and Sangbae Kim},
@@ -592,19 +614,19 @@
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2509.01044},}
     </code></pre>
-  </div>
-</section>
-
-<!-- Footer. -->
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>.
-      </p>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- Footer. -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
